@@ -68,3 +68,26 @@ function startGame() {
 }
 
 startGame();
+
+function removeCard(){
+  while(deck.hasChildNodes()){
+deck.removeChild(deck.firstChild)
+  }
+}
+
+function timer(){
+  time = setInterval(function(){
+    seconds++;
+    if (seconds === 60){
+minutes ++;
+seconds =0;
+    } 
+
+timeCounter.innerHTML = "<i class='fa fa-hourglass-start'></i>" + "
+Timer: " + minutes" + "Mins " + seconds + "Secs";
+}, 1000)
+}
+
+function stopTime(){
+  clearInterval(time)
+}
