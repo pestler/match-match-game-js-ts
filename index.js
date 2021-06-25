@@ -110,5 +110,21 @@ function resetEverything(){
   startGame();
 }
 
+function movesCounter(){
+  movesCount.innerHTML ++;
+  moves ++;
+}
+
+function starRating(){
+  if (moves === 14){
+    star[2].firstElementChild.classList.remove("fa-star");
+    starCount--;
+  }
+  if (moves === 18){
+    star[1].firstElementChild.classList.remove("fa-star");
+    starCount--;
+  }
+
+}
 
 
