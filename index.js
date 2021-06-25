@@ -124,7 +124,17 @@ function starRating(){
     star[1].firstElementChild.classList.remove("fa-star");
     starCount--;
   }
+}
 
+function compareTwo(){
+  if (opened.length ===2){
+    document.body.stylepointerEvents = 'none';
+  }
+  if(opened.length ===2 && opened[0].src === opened[1].src){
+match();
+  } else if (opened.length === 2 && opened[0].src != opened[1].src){
+    noMatch()
+  }
 }
 
 
