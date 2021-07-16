@@ -134,4 +134,26 @@ match();
   }
 }
 
+function match(){
+  setTimeout(function(){
+    opened[0].parentElement.classList.add("match");
+    opened[1].parentElement.classList.add("match");
+    matched.push(...opened);
+    document.body.style.pointerEvents = "auto";
+    winGame();
+    opened = [];
+  },600);
+  movesCounter();
+  starRating();
+}
 
+function noMatch(){
+  setTimeout(function(){
+    opened[0].parentElement.classList.remove("flip");
+    opened[1].parentElement.classList.remove("flip");
+    document.body.style.pointerEvents = "auto";
+    opened = [];
+  },700)
+  movesCounter();
+  starRating();
+  }
