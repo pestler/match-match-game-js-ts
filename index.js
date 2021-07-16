@@ -39,12 +39,10 @@ let time;
 let minutes = 0;
 let seconds = 0;
 let timeStart = false;
-function shuffle() {
-  let currentIndex = array.length,
-    temporaryValue,
-    randomIndex;
+function shuffle(array) {
+  let currentIndex = array.length,    temporaryValue,    randomIndex;
   while (currentIndex !== 0) {
-    randomIndex = Match.floor(Match.random() * currentIndex);
+    randomIndex = Math.floor(Math.random() * currentIndex);
     currentIndex -= 1;
     temporaryValue = array[currentIndex];
     array[currentIndex] = array[randomIndex];
@@ -78,15 +76,14 @@ deck.removeChild(deck.firstChild)
 function timer(){
   time = setInterval(function(){
     seconds++;
-    if (seconds === 60){
-minutes ++;
-seconds =0;
-    } 
-
-timeCounter.innerHTML = "<i class='fa fa-hourglass-start'></i>"+"
-Timer: " + minutes " + " Mins " + seconds + "Secs";
-}, 1000)
+    if(seconds  === 60){
+      minutes++;
+      seconds = 0;
+    }
+    timeCounter.innerHTML = "<i class='fa fa-hourglass-start'></i>"+"Timer:" + minutes + "Mins" + seconds + "Secs";
+  }, 1000)
 }
+
 
 function stopTime(){
   clearInterval(time)
