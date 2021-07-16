@@ -83,8 +83,8 @@ minutes ++;
 seconds =0;
     } 
 
-timeCounter.innerHTML = "<i class='fa fa-hourglass-start'></i>" + 
-"Timer: " + minutes " + " Mins " + seconds + "Secs";
+timeCounter.innerHTML = "<i class='fa fa-hourglass-start'></i>"+"
+Timer: " + minutes " + " Mins " + seconds + "Secs";
 }, 1000)
 }
 
