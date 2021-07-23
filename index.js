@@ -59,7 +59,7 @@ function startGame() {
   for (let i = 0; i < shuffledDeck.length; i++) {
     const liTag = document.createElement('LI');
     liTag.classList.add('card');
-    const addImage = document.createElement('IMG');
+    const addImage = document.createElement('img');
     liTag.appendChild(addImage);
     addImage.setAttribute('src', 'img/' + shuffledDeck[i]);
     addImage.setAttribute('alt', 'image of vault');
